@@ -21,7 +21,7 @@ void Calculator::solve() {
 }
 Calculator::~Calculator() {
 	for (auto& op : operations) {
-		delete op;
+		op->destroy();
 	}
 	for (auto& lib : libraries) {
 		FreeLibrary(lib);
